@@ -9,7 +9,8 @@ const Footer = () => {
   const footerLinks = [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
-    { label: "Why Now", href: "#why-now" },
+    { label: "What We Offer", href: "#what-we-offer" },
+    { label: "Advertising", href: "#advertising-structure" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -68,8 +69,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-red-600">Get in Touch</h4>
             <div className="space-y-3 text-red-600/70">
-              <p>hello@adroute.in</p>
+              <p>adroute.co@gmail.com</p>
               <p>+91 9391517920</p>
+              <p>+91 9392094066</p>
               <p>Hyderabad, India</p>
             </div>
           </div>

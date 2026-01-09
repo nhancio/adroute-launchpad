@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Send, CheckCircle, MapPin, Mail, Phone } from "lucide-react";
+import { Send, CheckCircle, Mail, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
@@ -45,21 +45,16 @@ const ContactSection = () => {
     }, 3000);
   };
 
-  const contactInfo = [
+  const teamMembers = [
     {
-      icon: MapPin,
-      label: "Location",
-      value: "Hyderabad, India",
+      name: "A. Dattu Darahas",
+      title: "Founder and CEO, AdRoute",
+      phone: "+91 9392094066",
     },
     {
-      icon: Mail,
-      label: "Email",
-      value: "hello@adroute.in",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+91 9391517920",
+      name: "G. Mahendar",
+      title: "Co-Founder and MD, AdRoute",
+      phone: "+91 9391517920",
     },
   ];
 
@@ -72,10 +67,10 @@ const ContactSection = () => {
             Get Started
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-4 sm:mb-6">
-            Contact <span className="text-primary">Us</span>
+            Connect with <span className="text-primary">AdRoute</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground px-4">
-            Reach out to us and grow your brand from 1x to 100x
+            Our team is ready to assist with inquiries or advertising slot reservations
           </p>
         </div>
 
@@ -83,25 +78,55 @@ const ContactSection = () => {
           {/* Contact Info */}
           <div className="animate-fade-up order-2 lg:order-1">
             <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">
-              Let's Start a Conversation
+              Get in Touch
             </h3>
             <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">
               Ready to amplify your brand presence across India's travel network? 
               Fill out the form and our team will get back to you within 24 hours.
             </p>
 
-            <div className="space-y-4 sm:space-y-6">
-              {contactInfo.map((item, index) => (
-                <div key={index} className="flex items-center gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-red-100 flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                  </div>
-                  <div>
-                    <div className="text-xs sm:text-sm text-muted-foreground">{item.label}</div>
-                    <div className="text-sm sm:text-base text-foreground font-medium">{item.value}</div>
+            {/* Team Members */}
+            <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+              {teamMembers.map((member, index) => (
+                <div key={index} className="bg-red-50 rounded-xl p-4 sm:p-6 border border-red-100">
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm sm:text-base font-semibold text-foreground mb-1">
+                        {member.name}
+                      </div>
+                      <div className="text-xs sm:text-sm text-muted-foreground mb-2">
+                        {member.title}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Phone className="w-4 h-4 text-primary" />
+                        <a href={`tel:${member.phone.replace(/\s/g, '')}`} className="text-sm sm:text-base text-primary hover:underline font-medium">
+                          {member.phone}
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* General Email */}
+            <div className="bg-red-50 rounded-xl p-4 sm:p-6 border border-red-100">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                </div>
+                <div>
+                  <div className="text-xs sm:text-sm text-muted-foreground mb-1">
+                    General Inquiries Email
+                  </div>
+                  <a href="mailto:adroute.co@gmail.com" className="text-sm sm:text-base text-primary hover:underline font-medium">
+                    adroute.co@gmail.com
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
