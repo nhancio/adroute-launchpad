@@ -3,7 +3,7 @@ import { Instagram, Linkedin, ArrowUpRight } from "lucide-react";
 const Footer = () => {
   const socialLinks = [
     { icon: Instagram, href: "https://instagram.com/adroute", label: "Instagram" },
-    { icon: Linkedin, href: "https://linkedin.com/company/adroute", label: "LinkedIn" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/adroute-co-4588b83a2/", label: "LinkedIn" },
   ];
 
   const footerLinks = [
