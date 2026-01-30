@@ -68,10 +68,8 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 animate-fade-up animation-delay-600">
+          <div className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 animate-fade-up animation-delay-600">
             {[
-              { value: "50+", label: "Cities" },
-              { value: "10K+", label: "Buses" },
               { value: "1M+", label: "Daily Reach" },
               { value: "99%", label: "Uptime" },
             ].map((stat, index) => (
